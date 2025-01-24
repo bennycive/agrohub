@@ -4,14 +4,19 @@ import { LandingPageComponent } from './landing/landing-page/landing-page.compon
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { WeatherComponent } from './landing/weather/weather.component';
 import { CropsComponent } from './landing/crops/crops.component';
+import { ContactsComponent } from './landing/contacts/contacts.component';
+import { ServicesComponent } from './landing/services/services.component';
 
 
 export const routes: Routes = [
   // Landing Page Routes
-  { path: '', component: LandingPageComponent }, 
+  { path: '', component: LandingPageComponent },
   { path: 'weather', component: WeatherComponent },
   { path: 'crops', component: CropsComponent },
- 
+  { path: 'contacts', component: ContactsComponent },
+  { path: 'services', component: ServicesComponent},
+
+
   { path: '**', redirectTo: '' },
 
 
