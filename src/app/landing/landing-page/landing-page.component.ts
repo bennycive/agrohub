@@ -8,7 +8,7 @@ import { FarmtoolComponent } from '../farmtool/farmtool.component';
 
 
 @Component({
-  
+
   selector: 'app-landing-page',
   imports: [
     HeaderComponent,
@@ -22,9 +22,11 @@ import { FarmtoolComponent } from '../farmtool/farmtool.component';
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.css'
 
+
 })
 
 
 export class LandingPageComponent {
 
+  
 }
