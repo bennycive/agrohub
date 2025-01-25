@@ -1,0 +1,34 @@
+footer {
+  background-color: #2F855A; /* Tailwind bg-green-600 */
+}
+
+footer h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #68D391; /* Tailwind hover-green-300 */
+}
+
+footer .fab {
+  transition: color 0.3s ease;
+}
+
+footer .fab:hover {
+  color: #68D391;
+}
