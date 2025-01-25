@@ -7,20 +7,23 @@ import { CropsComponent } from './landing/crops/crops.component';
 import { ContactsComponent } from './landing/contacts/contacts.component';
 import { ServicesComponent } from './landing/services/services.component';
 import { AboutComponent } from './landing/about/about.component';
+import { TeamComponent } from './landing/team/team.component';
 
 
 export const routes: Routes = [
   // Landing Page Routes
+
   { path: '', component: LandingPageComponent },
   { path: 'weather', component: WeatherComponent },
   { path: 'about', component: AboutComponent },
   { path: 'crops', component: CropsComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'services', component: ServicesComponent},
+  {path: 'team', component: TeamComponent},
 
 
-  { path: '**', redirectTo: '' },
+ //  admin routes
 
 
-
+ { path: '**', redirectTo: '' },
 ];
