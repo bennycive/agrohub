@@ -1,0 +1,12 @@
+.services-section {
+  background: linear-gradient(to right, #f4f6ff, #e5d9f2);
+}
+
+.service-card {
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+}
