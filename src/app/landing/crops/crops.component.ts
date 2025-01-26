@@ -23,6 +23,7 @@ import { HeaderComponent } from "../header/header.component";
   imports: [CommonModule, FooterComponent, HeaderComponent],
 })
 export class CropsComponent implements OnInit {
+
   crops = [
     { name: 'Wheat', description: 'A cereal grain cultivated for its seed.', image: 'assets/crops/crop1.jpg' },
     { name: 'Rice', description: 'A staple food crop, often grown in flooded fields.', image: 'assets/crops/crop2.jpg' },
@@ -32,6 +33,8 @@ export class CropsComponent implements OnInit {
     { name: 'Maize', description: 'A widely grown cereal crop used as food and for livestock feed.', image: 'assets/crops/crop7.jpg' },
     { name: 'Maize', description: 'A widely grown cereal crop used as food and for livestock feed.', image: 'assets/crops/crop1.jpg' }
   ];
+
+  
 
   constructor() {}
 

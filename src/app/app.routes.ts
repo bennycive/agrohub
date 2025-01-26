@@ -8,7 +8,7 @@ import { ContactsComponent } from './landing/contacts/contacts.component';
 import { ServicesComponent } from './landing/services/services.component';
 import { AboutComponent } from './landing/about/about.component';
 import { TeamComponent } from './landing/team/team.component';
-
+import { AdminLayoutComponent } from './admin/admin-layout/admin-layout.component';
 
 export const routes: Routes = [
   // Landing Page Routes
@@ -19,12 +19,32 @@ export const routes: Routes = [
   { path: 'crops', component: CropsComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'services', component: ServicesComponent},
-  {path: 'team', component: TeamComponent},
+  { path: 'team', component: TeamComponent},
 
 
- //  admin routes
 
 
+ // Admin Routes with /dashboard prefix
+ {
+  path: 'dashboard',  // All admin routes are prefixed by /dashboard
+  component: AdminLayoutComponent,
+  children: [
+    { path: '', component: DashboardComponent },  // /dashboard (default route)
+
+    // { path: 'products', component: ProductsComponent },
+    // { path: 'users', component: UsersComponent },
+    // { path: 'reports', component: ReportsComponent },
+
+  ],
+
+
+
+},
+
+
+
+
+// Redirect any unknown route to the landing page
  { path: '**', redirectTo: '' },
- 
+
 ];

@@ -1,0 +1,73 @@
+<div class="flex h-screen bg-gray-100">
+  <!-- Sidebar -->
+  <div class="w-64 bg-green-900 text-white fixed top-0 left-0 bottom-0 transition-transform transform duration-300 ease-in-out" [ngClass]="{'-translate-x-full': !isSidebarVisible}">
+
+    <div class="flex items-center justify-center py-6">
+      <h1 class="text-2xl font-bold">AgroHub Admin</h1>
+    </div>
+
+    <nav class="mt-8">
+      <ul class="space-y-4">
+        <li>
+          <a href="/dashboard" class="flex items-center p-4 hover:bg-green-800 rounded-lg">
+            <span class="material-icons-outlined">dashboard</span>
+            <span class="ml-4">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/products" class="flex items-center p-4 hover:bg-green-800 rounded-lg">
+            <span class="material-icons-outlined">store</span>
+            <span class="ml-4">Products</span>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/users" class="flex items-center p-4 hover:bg-green-800 rounded-lg">
+            <span class="material-icons-outlined">people</span>
+            <span class="ml-4">Users</span>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/reports" class="flex items-center p-4 hover:bg-green-800 rounded-lg">
+            <span class="material-icons-outlined">bar_chart</span>
+            <span class="ml-4">Reports</span>
+          </a>
+        </li>
+        <li>
+          <a href="/dashboard/settings" class="flex items-center p-4 hover:bg-green-800 rounded-lg">
+            <span class="material-icons-outlined">settings</span>
+            <span class="ml-4">Settings</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="flex-1 ml-64 flex flex-col">
+    <!-- Top Navbar -->
+    <header class="bg-white shadow-md flex items-center justify-between p-4">
+      <div class="flex items-center">
+        <!-- Sidebar Toggle Button for mobile -->
+        <button class="lg:hidden px-3 py-2 text-gray-700 hover:bg-gray-200 rounded-md" (click)="toggleSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </button>
+        <h2 class="text-xl font-semibold ml-4">Admin Dashboard</h2>
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <button class="text-gray-700 hover:bg-gray-200 p-2 rounded-full">
+          <span class="material-icons-outlined">notifications</span>
+        </button>
+
+        <button class="text-gray-700 hover:bg-gray-200 p-2 rounded-full">
+          <span class="material-icons-outlined">account_circle</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area: Where page content will be loaded -->
+    <main class="bg-white flex-1 p-6">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

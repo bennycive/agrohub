@@ -1,0 +1,51 @@
+/* Global Styles for Layout */
+body {
+  background-color: #f7fafc; /* light gray background */
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #2b3a67; /* dark blue */
+}
+
+/* Navbar Styles */
+header {
+  background-color: #ffffff; /* white background */
+  border-bottom: 1px solid #e5e7eb; /* subtle border */
+}
+
+header button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #f1f5f9;
+}
+
+/* Hover Effects */
+nav a:hover {
+  background-color: #1e40af; /* dark blue hover */
+  color: #ffffff;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: -250px;
+    transition: 0.3s;
+    z-index: 100;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .lg\:hidden {
+    display: block;
+  }
+}
