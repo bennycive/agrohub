@@ -3,7 +3,7 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
 
-  
+
 
   theme: {
     extend: {
@@ -41,4 +41,5 @@ module.exports = {
   },
 
   plugins: [],
+  
 }

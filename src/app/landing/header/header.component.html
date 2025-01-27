@@ -10,15 +10,62 @@
       </div>
 
       <!-- Navigation Menu (Desktop) -->
-      <nav class="hidden md:flex space-x-6">
-        <a href="/" class="hover:text-green-300">Home</a>
-        <a href="/about" class="hover:text-green-300">About Us</a>
+      <!-- <nav class="hidden md:flex space-x-6">
+        <a href="/" class="hover:text-green-300" routerLinkActive="active">Home</a>
+        <a href="/about" class="hover:text-green-300" routerLinkActive="active">About Us</a>
         <a href="/services" class="hover:text-green-300">Services</a>
         <a href="/weather" class="hover:text-green-300">Weather</a>
         <a href="/crops" class="hover:text-green-300">Crops</a>
         <a href="/team" class="hover:text-green-300">Team</a>
         <a href="/contacts" class="hover:text-green-300">Contact</a>
+      </nav> -->
+
+      <nav class="hidden md:flex space-x-6">
+        <a href="/"
+           class="hover:text-green-300"
+           routerLink="/"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }">
+          Home
+        </a>
+        <a href="/about"
+           class="hover:text-green-300"
+           routerLink="/about"
+           routerLinkActive="active">
+          About Us
+        </a>
+        <a href="/services"
+           class="hover:text-green-300"
+           routerLink="/services"
+           routerLinkActive="active">
+          Services
+        </a>
+        <a href="/weather"
+           class="hover:text-green-300"
+           routerLink="/weather"
+           routerLinkActive="active">
+          Weather
+        </a>
+        <a href="/crops"
+           class="hover:text-green-300"
+           routerLink="/crops"
+           routerLinkActive="active">
+          Crops
+        </a>
+        <a href="/team"
+           class="hover:text-green-300"
+           routerLink="/team"
+           routerLinkActive="active">
+          Team
+        </a>
+        <a href="/contacts"
+           class="hover:text-green-300"
+           routerLink="/contacts"
+           routerLinkActive="active">
+          Contact
+        </a>
       </nav>
+
 
       <!-- Action Buttons -->
       <div class="hidden md:flex space-x-4">
@@ -41,7 +88,7 @@
     <!-- Mobile Menu -->
     <div class="bg-green-800 md:hidden traslation bounceTwice" [ngClass]="{'hidden': !isMenuVisible}">
       <nav class="flex flex-col space-y-2 p-4">
-        <a href="/" class="hover:text-green-300">Home</a>
+        <a href="#" [routerLink]="['/']" routerLinkActive="router-link-active"  class="hover:text-green-300">Home</a>
         <a href="/about" class="hover:text-green-300">About Us</a>
         <a href="/services" class="hover:text-green-300">Services</a>
         <a href="/weather" class="hover:text-green-300">Weather</a>
