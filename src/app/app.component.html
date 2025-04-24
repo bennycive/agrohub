@@ -1,2 +1,14 @@
 <app-preloader></app-preloader>
 <router-outlet></router-outlet>
+
+
+ureka:
+   client:
+      serviceUrl:
+          defaultZone: http://localhots/8080/eureka/
+
+       register-with-eureka: true
+       fetch-registry: true
+
+  instance: 
+     hostname:localhost  
